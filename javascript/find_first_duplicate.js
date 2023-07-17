@@ -1,5 +1,15 @@
 function findFirstDuplicate(arr) {
-  // type your code here
+  // go through each element in the array grab that and comppare ut ti every other element and see if it matches
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    // need to iterate through each other elemnt in array
+    for (let y = i + 1; y < arr.length; y++) {
+      if (arr[i] === arr[y]) {
+        return arr[i]; // Return the first duplicate found
+      }
+    }
+  }
+  return - 1
 }
 
 if (require.main === module) {
